@@ -1,27 +1,28 @@
 public class Unit2project {
-    public static final int ROW = 6;
-    public static final int COLUMN = 4;
-
+//cals methods
     public static void main(String[] args) {
-        stars();
-        money();
-        Hashtag();
+       //sets the height and width for methods
+        int height = 9;
+       int width = 12;
+       stars(height, width);
+        money(height, width);
+        Hashtag(height, width);
 
     }
-
-    public static void stars() {
-        for (int i = 0; i < ROW; i++) {
-            for (int j = 0; j < COLUMN; j++) {
+//prints star box
+    public static void stars(int height, int width) {
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
             System.out.println();
     }
-
-    public static void money() {
-        for (int i = 0; i < ROW; i++) {
-            for (int j = 0; j < COLUMN; j++) {
+// prints money box
+    public static void money(int height, int width) {
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
                 System.out.print("$");
 
 
@@ -30,10 +31,10 @@ public class Unit2project {
         }
         System.out.println();
     }
-
-    public static void Hashtag() {
-        for (int i = 0; i < ROW; i++) {
-            for (int j = 0; j < COLUMN; j++) {
+// prints hashtag box
+    public static void Hashtag(int height, int width) {
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
                 System.out.print("#");
 
 
