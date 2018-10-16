@@ -1,6 +1,16 @@
+/*
+ *****************************************************
+ * Nicholas Bates
+ * AP CS A
+ * Period 1
+ * October 9, 2018
+ * DrawRocket assignment; prints rocket to console
+ *****************************************************
+ */
 public class DrawRocket {
-    public static final int SIZE = 14;
-
+   //sets the sie of the rocket
+    public static final int SIZE = 50;
+//calls the diffrent parts of the rocket
     public static void main(String[] args) {
         drawCone();
         drawDivider();
@@ -11,15 +21,18 @@ public class DrawRocket {
         drawTopHalf();
         drawDivider();
         drawCone();
+
+
     }
 
+//draws the cone of the rocket
     public static void drawCone() {
         for (int line = 1; line <= (SIZE * 2 - 1); line++) {
             System.out.print(" ");
-            for (int spaces = 1; spaces <= (SIZE * 2 - 1) - line; spaces++){
+            for (int space = 1; space <= (SIZE * 2 - 1) - line; space++){
                 System.out.print(" ");
             }
-            for (int slashes = 1; slashes <= line; slashes++) {
+            for (int slash = 1; slash <= line; slash++) {
                 System.out.print("/");
             }
             System.out.print("**");
@@ -29,7 +42,7 @@ public class DrawRocket {
             System.out.println(" ");
         }
     }
-
+//draws the divider of the rocket
     public static void drawDivider() {
         System.out.print("+");
         for (int i = 1; i <= SIZE * 2; i++) {
@@ -37,7 +50,7 @@ public class DrawRocket {
         }
         System.out.println("+");
     }
-
+//draws the top half of the rocket
     public static void drawTopHalf() {
         for (int line = 1; line <= SIZE; line++) {
             System.out.print("|");
@@ -55,7 +68,7 @@ public class DrawRocket {
             System.out.println("|");
         }
     }
-
+//draws the bottom half of the rocket
     public static void drawBottomHalf() {
         for (int line = SIZE; line >= 1; line--) {
             System.out.print("|");
@@ -74,4 +87,5 @@ public class DrawRocket {
         }
     }
 }
+
 

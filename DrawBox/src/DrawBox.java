@@ -17,7 +17,6 @@ public class DrawBox {
 
 
     }
-
     public static void drawTopBottom(){
         System.out.println("+-------+");
     }
