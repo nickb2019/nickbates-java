@@ -2,8 +2,8 @@ public class Unit2project {
     //calls methods
     public static void main(String[] args) {
         //sets the height and width for methods
-        int height = 6;
-        int width = 6;
+        int height = 5;
+        int width = 9;
         stars(height, width, '#');
         stars(height, width, '*');
         stars(height, width, '$');
