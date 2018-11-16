@@ -1,3 +1,10 @@
+/*
+Nicholas Bates
+10/18/18
+Ap Computer Science
+period 1
+ */
+
 public class CityDistance {
     public static void main(String[] args) {
 
