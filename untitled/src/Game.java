@@ -12,7 +12,7 @@ public class Game {
 
 
         Scanner scan = new Scanner(System.in);
-        Random generator = new Random();
+
 
         System.out.println("Hey, let's play Rock, Paper, Scissors!\n" +
                 "Please enter a move.\n" + "Rock = R, Paper" +
