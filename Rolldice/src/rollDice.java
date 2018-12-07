@@ -1,23 +1,23 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.Arrays;
 public class rollDice {
-    public static final int DICENUM = 1;
+    public static final int DICENUM = 3;
     public static void main(String[] args) {
         String play = " ";
-        System.out.println("Do you want to play y/n?");
+        System.out.println("Do you want to roll a dice? y/n?");
         Scanner playGame = new Scanner(System.in);
         play = playGame.nextLine();
         String dice[][] = new String[6][5];
         String gameDice[][] = new String[DICENUM][5];
         dice = defDice();
-
         while(play.equals("y")) {
-            printDice();
-            rollDice();
-            drawLine();
-            System.out.println("Do you want to play Again y/n?");
+            for(int i=0;i<DICENUM;i++) {
+                int x = rollDice();
+                printDice(dice, x);
+                drawLine();
+            }
+            System.out.println("Do you want to Roll Again y/n?");
             play = playGame.nextLine();
 
         }
@@ -42,14 +42,14 @@ public class rollDice {
                         "|      *|",
                         " ------- "},
                 {" ------- ",
-                        "|*     *|",
+                        "| *   * |",
                         "|       |",
-                        "|*     *|",
+                        "| *   * |",
                         " ------- "},
                 {" ------- ",
-                        "|*     *|",
+                        "| *   * |",
                         "|   *   |",
-                        "|*     *|",
+                        "| *   * |",
                         " ------- "},
                 {" ------- ",
                         "| *   * |",
@@ -60,23 +60,26 @@ public class rollDice {
         };
 
     }
-    public static void printDice(Arrays dice){
+    public static void printDice(String[][] dice, int x){
 
-        System.out.println("Im at print Dice");
-        for(int i = 0; i <6;i++){
-            for(int j = 0; j<5;j++){
-                System.out.println(dice[i][j]);
-            }
-        }
-    }
 
-    public static void rollDice() {
-        System.out.println("Im at roll Dice");
+           for (int i = 0; i < 4; i++) {
+               System.out.println(dice[x][i]);
+           }
+
+       }
+
+
+    public static int rollDice() {
+
+        int x = (int)(Math.random()*5)+1;
+
+            return x;
     }
 
     public static void drawLine(){
 
-        System.out.println("Im at draw line");
+        System.out.println("---------------------------");
     }
 
 }
